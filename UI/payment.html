@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+    
+    <title>Fast Food Fast | Welcome</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/template.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+
+  <body>
+    
+      <div id = "Header">
+          <div id="logo">
+            
+          </div>
+    
+          <div id="account">
+            <div class = "toggle-btn1" onclick="toggleaccount()">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            
+            <div class="account-links">
+              <div class="dropdown1">
+                <button class="dropbtn1">UserName</button>
+            
+                <div class="dropdown-content1">
+                  <a  href="login.html">Log out</a>
+                  
+                </div>
+              </div>
+          
+            </div>  
+                      
+          </div>
+        
+        </div>
+    
+        <div id="content-main">
+          <div id="sidebar">
+            <div class = "toggle-btn" onclick="togglesidebar()">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+    
+            
+    
+            <div class="dropdown">
+                <button class="dropbtn">Home</button>
+      
+                <div class="dropdown-content">
+                  <a href="dashboard.html">Home</a>
+                  
+                </div>
+              </div>
+    
+            <div class="dropdown">
+              <button class="dropbtn">Food Menu</button>
+    
+              <div class="dropdown-content">
+                <a href="foodmenu.html">View Menu</a>
+                
+              </div>
+            </div>
+    
+            <div class="dropdown">
+              <button class="dropbtn">Orders</button>
+            
+              <div class="dropdown-content">
+                <a href="history.html">History</a>
+                <a href="activeorders.html">Active Orders</a>
+              </div>
+            </div>
+          </div> 
+
+      <script type="text/javascript">
+        function togglesidebar(){
+          document.getElementById("sidebar").classList.toggle('active');
+        }
+	  
+	      function toggleaccount(){
+          document.getElementById("account").classList.toggle('active');
+        }
+
+        function OrderRes(){
+          alert("Your Order has been received and is being worked on.");
+        }
+	  
+      </script>
+    
+      <div id="content-page">
+        
+            <form action="activeorders.html">
+                    <div class="login">
+                        <h1>Enter the Location and Mode of Payment...</h1>
+                        <form>
+                        <input type="text" placeholder="Enter your Location Here..." name="Location"> <br><br>
+        
+                        <input type="radio" name="Payment" value="Cash On Order" checked> Cash On Order<br><br>
+                        <input type="radio" name="Payment" value="Cash On Delivery"> Cash On Delivery<br><br>
+                        <input type="radio" name="Payment" value="Credit Card"> Credit Card<br><br>
+                        <input type="radio" name="Payment" value="Mobile Money"> Mobile Money<br><br>
+                        <input type="radio" name="Payment" value="Other"> Other<br><br><br>
+        
+                        <input type="submit" value="Send" onclick="OrderRes()"></br>
+                        </form>
+                        </br>
+                    </div>
+                    
+            </form>
+      
+      </div>
+
+    </div>
+    
+    <div class="footer">
+      <p class="copyrt">&copy; Fast-Food-Fast 2018</p>
+      <p class="shre">Get the food to come to you!</p>
+    </div>
+
+  </body>
+</html>
