@@ -92,6 +92,10 @@
 	      function toggleaccount(){
           document.getElementById("account").classList.toggle('active');
         }
+
+        function addfood() {
+          alert ("Food has been added");
+        }
 	  
       </script>
     
@@ -99,13 +103,13 @@
             <div class="addfood">
                     <h1>Edit food items</h1>
                     
-                  <form action="">
-                    <input type="text" placeholder="Food Name..." name="Name"> <br><br><br>
+                  <form action="foodmenu.html">
+                    <input type="text" placeholder="Food Name..." name="Name" value="Hamburger"> <br><br><br>
         
                     <input type="file" onchange="previewFile()"><br><br>
                     <img src="" height="200" alt="Image preview..." name = "Image"><br><br>
         
-                    <input type="text" placeholder="Price..." name="Price"> <br><br>
+                    <input type="text" placeholder="Price..." name="Price" value="450"> <br><br>
                 
                     <input type="submit" value="Add" onclick="addfood()"></br>
                   </form>
